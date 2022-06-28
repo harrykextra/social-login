@@ -1,0 +1,32 @@
+debug: false
+server:
+  port: 8080
+  servlet:
+    context-path: /
+     
+spring:
+  datasource:
+    password: password
+    url: jdbc:mysql://localhost:3306/sociallogindb?serverTimezone=UTC
+    username: sociallogin
+  jpa:
+    hibernate:
+      ddl-auto: create
+
+  security:
+    oauth2:
+      client:
+        registration:
+         google:
+          clientId: h3brptvnar8ee0fu4cjpgp5lnc8vl0ru.apps.googleusercontent.com
+          clientSecret: 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
+          scope:
+           - email
+           - profile
+
+         facebook:
+          clientId: 620272136380206
+          clientSecret: 35cf5d7a97126e74c2b2b6f29b26ec7b
+          scope:
+           - email
+           - public_profile
